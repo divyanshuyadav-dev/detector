@@ -9,5 +9,5 @@ result = model.train(
     epochs = 100,
     exist_ok = True,
     device = 0 if torch.cuda.is_available() else 'cpu',
-    patience = 5
+    # patience = 10
 )

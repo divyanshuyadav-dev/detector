@@ -7,7 +7,7 @@ result = model.train(
     
     data = 'dataset/data.yaml',
     epochs = 100,
-    exist_ok = true,
+    exist_ok = True,
     device = 0 if torch.cuda.is_available() else 'cpu',
     patience = 5
 )

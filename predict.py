@@ -5,9 +5,10 @@ import torch
 model = YOLO("best.pt")
 
 results = model.predict(
-    source='dataset/inference_media/',
+    source='dataset/inference_media/videos/',
     save=True,
-    device = 0 if torch.cuda.is_available() else "cpu"
+    device = 0 if torch.cuda.is_available() else "cpu",
+    stream=True
 )
 
 for result in results:

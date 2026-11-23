@@ -5,7 +5,8 @@ model = YOLO("/path/to/model")
 
 metrics = model.val(
     data = 'dataset/data.yaml',
-    device = 0 if torch.cuda.is_available() else "cpu"
+    device = 0 if torch.cuda.is_available() else "cpu",
+    exist_ok = True
 )
 
 # extract data from metrics

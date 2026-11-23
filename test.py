@@ -9,3 +9,4 @@ metrics = model.val(
 )
 
 # extract data from metrics
+(metrics.save_dir/'val_metrics.csv').write_text(metrics.to_csv())
